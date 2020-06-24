@@ -18,7 +18,7 @@ The classifier code and trained model is in this folder.
 Assembly code generator codes are in this folder.
 
 ## Requirements: 
-Tensorflow TODO
+TensorFlow >= v1.5
 
-## How to cite? 
+## How to cite:
 TODO
