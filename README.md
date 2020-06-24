@@ -9,8 +9,9 @@ Several techniques have been proposed to detect vulnerable Spectre gadgets in wi
 Finally, we propose FastSpec which builds a classifier with the generated Spectre gadgets based on the novel high dimensional Neural Embedding technique BERT. For case studies, we demonstrate that FastSpec discovers potential gadgets in OpenSSL libraries and Phoronix benchmarks. Further, FastSpec offers much greater flexibility and much faster classification compared to what is offered by the existing tools. Therefore FastSpec can be used for gadget detection in large-scale projects.
 
 ## Contact
-M. Caner Tol
-mtol@wpi.edu
+-M. Caner Tol
+  @canertol
+  mtol@wpi.edu
 
 ## Folders
 ### dataset: 
