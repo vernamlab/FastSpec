@@ -1,5 +1,6 @@
 # FastSpec
-Github repository for our paper *FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings*
+Github repository for our paper,
+*FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings*
 ![](FastSpec/FastSpecHD_cropped.gif)
 ## Abstract:
 
