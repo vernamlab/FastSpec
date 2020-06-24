@@ -10,22 +10,12 @@ def split(word):
 
 def thread_parser(index,filepath):
     print('Parsing Dataset')
-    cmax=0
     data = []
-    ctr=0
-    print('got the file names')
-   
     victimfile = os.path.join(filepath)
     function = []
-
     with open(victimfile, 'r') as f:
-    #capture = 0
         print(victimfile)
         for row in f:
-            ctr = ctr+1
-            if ctr%100000==0:
-                print('counter = ',ctr)
-            
             if 'Disassembly' in row:
                 continue
             row = row.replace('\n','')
@@ -135,7 +125,7 @@ def thread_parser(index,filepath):
                             function.extend(oper)
             elif not '#' in row and not '"' in row: 
                 function.append(row)
-        function = replace_labels(function,ctr)
+        function = replace_labels(function)
         data.append(function[2:])
     return data        
 
@@ -143,7 +133,7 @@ def parse_dataset(filepath):
     data = thread_parser('1',filepath)
     return data
   
-def replace_labels(function,ctr):
+def replace_labels(function):
 
     label_dict = dict()
     label=0
@@ -173,12 +163,8 @@ def build_dictionary(data, vocabulary_size=None):
     for func in data:
         words.extend(func)
     count = []
-    # Now add most frequent words, limited to the N-most frequent (N=vocabulary size)
     count.extend(collections.Counter(words).most_common(vocabulary_size))
-    # Now create the dictionary
     word_dict = {}
-    # For each word, that we want in the dictionary, add it, then make it
-    # the value of the prior dictionary length
     for word,_ in count:
         word_dict[word] = len(word_dict) 
     return(word_dict)
@@ -186,14 +172,14 @@ if __name__ == "__main__":
 
     def parse(file):
         func_data =[]
-        func_data= parse_dataset('/home/caner/tmp/bert/data/asm/'+file)
+        func_data= parse_dataset('~/FastSpec/asm/'+file)
         data_reduced = reduce_dataset(func_data)    
-        filew = '/home/caner/tmp/bert/data/asm/'+file+'_test_reduced.txt'
+        filew = '~/FastSpec/asm/'+file+'_test_reduced.txt'
         with open(filew, 'w') as f:
             json.dump(data_reduced, f)   
         
-    start = time.time()
-    for f in os.listdir('/home/caner/tmp/bert/data/asm'):
+    #start = time.time()
+    for f in os.listdir('~/FastSpec/asm'):
         parse(f)
-    end = time.time()
-    print(end-start,'seconds')
+    #end = time.time()
+    #print(end-start,'seconds')
