@@ -35,3 +35,6 @@ TensorFlow >= v1.5
     primaryClass={cs.CR}
 }
 ```
+## Acknowledgments
+This work is supported by the National Science Foundation, under grant CNS1814406.
+
