@@ -1,5 +1,5 @@
 # FastSpec
-Github repository for our paper, FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings.[arxiv link]
+Github repository for our paper, [FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings](https://arxiv.org/abs/2006.14147)
 
 ![](FastSpec/FastSpecHD_cropped.gif)
 ## Overview:
@@ -25,4 +25,13 @@ Assembly code generator codes are in this folder.
 TensorFlow >= v1.5
 
 ## How to cite:
-TODO
+```
+@misc{tol2020fastspec,
+    title={FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings},
+    author={M. Caner Tol and Koray Yurtseven and Berk Gulmezoglu and Berk Sunar},
+    year={2020},
+    eprint={2006.14147},
+    archivePrefix={arXiv},
+    primaryClass={cs.CR}
+}
+```
