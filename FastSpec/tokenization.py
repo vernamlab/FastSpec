@@ -199,7 +199,7 @@ class BasicTokenizer(object):
   def tokenize(self, text):
     """Tokenizes a piece of text."""
     text = convert_to_unicode(text)
-    text = self._clean_text(text)
+    # text = self._clean_text(text)
     orig_tokens = whitespace_tokenize(text)
 
     output_tokens = whitespace_tokenize(" ".join(orig_tokens)) #split_tokens))
