@@ -12,7 +12,7 @@ This folder contains the training and test data sets for FastSpec. Each subfolde
 The classifier code and trained model is in this folder.
 ## Train From Scratch:
 
-# Build tfrecord files
+#### Build tfrecord files
 ```
 python3 create_pretraining_data.py \
 --input_file=~/FastSpec/data/data.txt \
@@ -25,7 +25,7 @@ python3 create_pretraining_data.py \
 --random_seed=12345 \
 --dupe_factor=5
 ```
-# Pretrain
+#### Pretrain
 ```
 python3 run_pretraining.py \
 --input_file=~/FastSpec/data/tf_examples.tfrecord* \
@@ -40,8 +40,8 @@ python3 run_pretraining.py \
 --num_warmup_steps=300000 \
 --learning_rate=2e-5
 ```
-# Pretrain for positional relations
-
+#### Pretrain for positional relations
+```
 python3 run_pretraining.py \
 --input_file=~/FastSpec/data/tf_examples.tfrecord* \
 --output_dir=~/FastSpec/data/pretraining_pos \
@@ -55,9 +55,9 @@ python3 run_pretraining.py \
 --num_warmup_steps=10000 \
 --learning_rate=2e-5 \
 --init_checkpoint=~/FastSpec/data/pretraining/model.ckpt-XXXXXX
-
-# Train (Fine-tune) the classifier
-
+```
+#### Train (Fine-tune) the classifier
+```
 -python3 run_classifier.py \
   "--task_name=assembly" \
   "--do_train=False" \
@@ -72,10 +72,10 @@ python3 run_pretraining.py \
   "--learning_rate=2e-5" \
   "--num_train_epochs=100 " \
   "--output_dir=~/FastSpec/data/assembly_output"
+```
 
-
-# Evaluate the classifier
-  
+#### Evaluate the classifier
+  ```
   python run_classifier.py \
   --task_name=assembly \
   --do_predict=true \
@@ -85,7 +85,7 @@ python3 run_pretraining.py \
   --init_checkpoint=~/FastSpec/tmp/assembly_output/model.ckpt-ZZZZZZZ \
   --max_seq_length=250 \
   --output_dir=~/FastSpec/tmp/assembly_output/
-  
+  ```
 ### SpectreGAN: 
 Assembly code generator codes are in this folder.
 
