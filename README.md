@@ -182,7 +182,7 @@ Open an issue.
 }
 ```
 
-## Watch video clip:
+## Watch the video clip:
 [![](https://raw.githubusercontent.com/vernamlab/FastSpec/master/FastSpec/title.PNG)](http://www.youtube.com/watch?v=Nf0dN7X0RuE "")
 
 ## Acknowledgments
