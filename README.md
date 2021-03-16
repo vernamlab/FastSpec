@@ -4,18 +4,23 @@ Github repository for our paper, [FastSpec: Scalable Generation and Detection of
 
 ## Spectre dataset: 
 This folder contains the training and test data sets for FastSpec. Each subfolder contains programs in x86 assembly language.
+```
+$ cd dataset
+$ sh build.sh
+```
 
 ## FastSpec: 
 The classifier code and trained model is in this folder.
 ### Scan a file with a trained model:
 ```
-$ cd example
+$ cd FastSpec/example
 $ sh scan.sh
 ```
 ### Train From Scratch:
 
 #### Build tfrecord files
 ```
+$ cd FastSpec
 $ python3 create_pretraining_data.py \
 --input_file=~/FastSpec/data/data.txt \
 --output_file=~/FastSpec/data/tf_examples.tfrecord \
@@ -93,6 +98,7 @@ Assembly code generator codes are in this folder.
 ### Training Steps:
 #### Pretraining
 ```
+$ cd SpectreGAN
 $ python3 train_mask_gan.py \
  --data_dir='~/FastSpec/SpectreGAN/data/spec_data.txt'' \
  --batch_size=100 \
