@@ -1,6 +1,11 @@
-step1
 
-python3 train_mask_gan.py \
+## SpectreGAN: 
+Assembly code generator codes are in this folder.
+### Training Steps:
+#### Pretraining
+```
+$ cd SpectreGAN
+$ python3 train_mask_gan.py \
  --data_dir='~/FastSpec/SpectreGAN/data/spec_data.txt'' \
  --batch_size=100 \
  --sequence_length=250 \
@@ -19,11 +24,11 @@ python3 train_mask_gan.py \
  --attention_option=luong \
  --dis_pretrain_steps=100\
  --gen_pretrain_steps=100
+```
 
-
-step2
-
-python3 train_mask_gan.py \
+#### Adversarial Training
+```
+$ python3 train_mask_gan.py \
 --data_dir='~/FastSpec/SpectreGAN/data/spec_data.txt' \
 --batch_size=100 \
 --sequence_length=250 \
@@ -43,10 +48,11 @@ python3 train_mask_gan.py \
 --attention_option=luong \
 --maskgan_ckpt='~/FastSpec/SpectreGAN/step1/train/model.ckpt-XXXXX' \
 --advantage_clipping=100.
-
-step3
-
- python3 generate_samples.py \
+```
+#### Generate New Samples
+Note that you need to verify the generated outputs.
+```
+ $ python3 generate_samples.py \
  --data_dir='~/FastSpec/SpectreGAN/data/spec_data.txt' \
  --data_set= spec \
  --batch_size=100 \
@@ -63,3 +69,4 @@ step3
  --mask_strategy=contiguous \
  --baseline_method=critic \
  --number_epochs=4
+```
