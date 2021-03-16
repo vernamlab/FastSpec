@@ -16,7 +16,7 @@ $ sh scan.sh
 
 #### Build tfrecord files
 ```
-python3 create_pretraining_data.py \
+$ python3 create_pretraining_data.py \
 --input_file=~/FastSpec/data/data.txt \
 --output_file=~/FastSpec/data/tf_examples.tfrecord \
 --vocab_file=~/FastSpec/data/combined_word_dict_format.txt \
@@ -29,7 +29,7 @@ python3 create_pretraining_data.py \
 ```
 #### Pretrain
 ```
-python3 run_pretraining.py \
+$ python3 run_pretraining.py \
 --input_file=~/FastSpec/data/tf_examples.tfrecord* \
 --output_dir=~/FastSpec/data/pretraining \
 --do_train=True \
@@ -44,7 +44,7 @@ python3 run_pretraining.py \
 ```
 #### Pretrain for positional relations
 ```
-python3 run_pretraining.py \
+$ python3 run_pretraining.py \
 --input_file=~/FastSpec/data/tf_examples.tfrecord* \
 --output_dir=~/FastSpec/data/pretraining_pos \
 --do_train=True \
@@ -60,7 +60,7 @@ python3 run_pretraining.py \
 ```
 #### Train (Fine-tune) the classifier
 ```
--python3 run_classifier.py \
+$ python3 run_classifier.py \
   "--task_name=assembly" \
   "--do_train=False" \
   "--do_eval=True" \
@@ -78,7 +78,7 @@ python3 run_pretraining.py \
 
 #### Evaluate the classifier
   ```
-  python run_classifier.py \
+ $ python run_classifier.py \
   --task_name=assembly \
   --do_predict=true \
   --data_dir=~/FastSpec/data_classifier \
@@ -93,7 +93,7 @@ Assembly code generator codes are in this folder.
 ### Training Steps:
 #### Pretraining
 ```
-python3 train_mask_gan.py \
+$ python3 train_mask_gan.py \
  --data_dir='~/FastSpec/SpectreGAN/data/spec_data.txt'' \
  --batch_size=100 \
  --sequence_length=250 \
@@ -116,7 +116,7 @@ python3 train_mask_gan.py \
 
 #### Adversarial Training
 ```
-python3 train_mask_gan.py \
+$ python3 train_mask_gan.py \
 --data_dir='~/FastSpec/SpectreGAN/data/spec_data.txt' \
 --batch_size=100 \
 --sequence_length=250 \
@@ -140,7 +140,7 @@ python3 train_mask_gan.py \
 #### Generate New Samples
 Note that you need to verify the generated outputs.
 ```
- python3 generate_samples.py \
+ $ python3 generate_samples.py \
  --data_dir='~/FastSpec/SpectreGAN/data/spec_data.txt' \
  --data_set= spec \
  --batch_size=100 \
