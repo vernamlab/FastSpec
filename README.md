@@ -1,6 +1,5 @@
 # FastSpec
-Github repository for our paper, [FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings](https://arxiv.org/abs/2006.14147) published in IEEE Euro S&P 2021.
-
+Github repository for our paper, [FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings](https://arxiv.org/abs/2006.14147). This work will appear in the proceedings of IEEE Euro S&P 2021.
 
 
 ## Spectre dataset: 
@@ -9,8 +8,10 @@ This folder contains the training and test data sets for FastSpec. Each subfolde
 ## FastSpec: 
 The classifier code and trained model is in this folder.
 ### Scan a file with a trained model:
-#TODO
-
+```
+$ cd example
+$ sh scan.sh
+```
 ### Train From Scratch:
 
 #### Build tfrecord files
