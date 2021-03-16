@@ -1,8 +1,7 @@
 # FastSpec
 Github repository for our paper, [FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings](https://arxiv.org/abs/2006.14147) published in IEEE Euro S&P 2021.
 
-## Contact
-* M. Caner Tol, @canertol mtol@wpi.edu
+
 
 ## Folders
 ### dataset: 
@@ -91,6 +90,9 @@ Assembly code generator codes are in this folder.
 
 ## Requirements: 
 TensorFlow >= v1.5
+
+## Having a problem with using the tool?
+Open an issue.
 
 ## How to cite:
 ```
