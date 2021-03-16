@@ -3,7 +3,7 @@
 The classifier code and trained model is in this folder.
 ### Scan a file with a trained model:
 ```
-$ cd FastSpec/example
+$ cd example
 $ sh scan.sh
 ```
 ### Train From Scratch:
