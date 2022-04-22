@@ -172,13 +172,13 @@ Open an issue.
 
 ## How to cite:
 ```
-@misc{tol2020fastspec,
-    title={FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings},
-    author={M. Caner Tol and Koray Yurtseven and Berk Gulmezoglu and Berk Sunar},
-    year={2020},
-    eprint={2006.14147},
-    archivePrefix={arXiv},
-    primaryClass={cs.CR}
+@inproceedings{tol2021fastspec,
+  title={FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings},
+  author={Tol, M. Caner and Gulmezoglu, Berk and Yurtseven, Koray and Sunar, Berk},
+  booktitle={2021 IEEE European Symposium on Security and Privacy (EuroS\&P)},
+  pages={616--632},
+  year={2021},
+  organization={IEEE}
 }
 ```
 
