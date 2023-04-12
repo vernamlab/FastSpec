@@ -173,8 +173,8 @@ Open an issue.
 ## How to cite:
 ```
 @inproceedings{tol2021fastspec,
-  title={FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings},
-  author={Tol, M. Caner and Gulmezoglu, Berk and Yurtseven, Koray and Sunar, Berk},
+  title={Fastspec: Scalable {G}eneration and {D}etection of {S}pectre {G}adgets {U}sing {N}eural {E}mbeddings},
+  author={Tol, M Caner and Gulmezoglu, Berk and Yurtseven, Koray and Sunar, Berk},
   booktitle={2021 IEEE European Symposium on Security and Privacy (EuroS\&P)},
   pages={616--632},
   year={2021},
