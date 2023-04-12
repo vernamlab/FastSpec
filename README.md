@@ -16,7 +16,7 @@ Github repository for our paper, [FastSpec: Scalable Generation and Detection of
 [![](https://raw.githubusercontent.com/vernamlab/FastSpec/master/FastSpec/title.PNG)](http://www.youtube.com/watch?v=Nf0dN7X0RuE "")
 
 ## Requirements: 
-TensorFlow >= v1.5
+TensorFlow = v1.5
 
 ## Spectre dataset: 
 This folder contains the training and test data sets for FastSpec. Each subfolder contains programs in x86 assembly language.
