@@ -1,6 +1,22 @@
 # FastSpec
 Github repository for our paper, [FastSpec: Scalable Generation and Detection of Spectre Gadgets Using Neural Embeddings](https://arxiv.org/abs/2006.14147). This work will appear in the proceedings of IEEE Euro S&P 2021.
 
+## How to cite:
+```
+@inproceedings{tol2021fastspec,
+  title={Fastspec: Scalable {G}eneration and {D}etection of {S}pectre {G}adgets {U}sing {N}eural {E}mbeddings},
+  author={Tol, M Caner and Gulmezoglu, Berk and Yurtseven, Koray and Sunar, Berk},
+  booktitle={2021 IEEE European Symposium on Security and Privacy (EuroS\&P)},
+  pages={616--632},
+  year={2021},
+  organization={IEEE}
+}
+```
+## Watch the video clip:
+[![](https://raw.githubusercontent.com/vernamlab/FastSpec/master/FastSpec/title.PNG)](http://www.youtube.com/watch?v=Nf0dN7X0RuE "")
+
+## Requirements: 
+TensorFlow >= v1.5
 
 ## Spectre dataset: 
 This folder contains the training and test data sets for FastSpec. Each subfolder contains programs in x86 assembly language.
@@ -164,26 +180,9 @@ Note that you need to verify the generated outputs.
  --baseline_method=critic \
  --number_epochs=4
 ```
-## Requirements: 
-TensorFlow >= v1.5
 
 ## Having a problem with using the tool?
 Open an issue.
-
-## How to cite:
-```
-@inproceedings{tol2021fastspec,
-  title={Fastspec: Scalable {G}eneration and {D}etection of {S}pectre {G}adgets {U}sing {N}eural {E}mbeddings},
-  author={Tol, M Caner and Gulmezoglu, Berk and Yurtseven, Koray and Sunar, Berk},
-  booktitle={2021 IEEE European Symposium on Security and Privacy (EuroS\&P)},
-  pages={616--632},
-  year={2021},
-  organization={IEEE}
-}
-```
-
-## Watch the video clip:
-[![](https://raw.githubusercontent.com/vernamlab/FastSpec/master/FastSpec/title.PNG)](http://www.youtube.com/watch?v=Nf0dN7X0RuE "")
 
 ## Acknowledgments
 This work is supported by the National Science Foundation, under grant CNS1814406.
